@@ -1,37 +1,113 @@
+import { useState, useEffect } from 'react';
+import validation from './validation';
 import style from './Form.module.css';
 
 const Form = () => {
+    const [input, setInput] = useState({
+        numeroCard:'',
+        nombreCard:'',
+        apellidoCard:'',
+        DNICard:'',
+        fechaCard:'',
+        cvcCard:''
+    })
+
+    const [error, setError] = useState({})
+
+    const handleChange = (event) =>{
+        setInput({...input, [event.target.name]:event.target.value})
+        
+    }
+
+    // const handleFocus = (event) => {
+    //     event.target.style.borderColor = 'red';
+    // }
+
+    // const handleBlur = (event) => {
+    //     event.target.style.borderColor = 'initial';
+    // }
+
+    useEffect(()=>{
+        if(input.numeroCard !== '' || input.nombreCard !== '' || input.apellidoCard !== '' || input.DNICard !== '' ||
+        input.fechaCard !== '' || input.cvcCard !== ''){
+            setError(validation(input))
+        }
+    },[input])
     return(
         <div className={style.center}>
+            <h1 className={style.title}>comprar con visa</h1>
+            <div className={style.imageCenter}>
+                 <img src='tarjeta-visa-ejemplo.jpg' alt='tarjeta' className={style.imageTamaño}/>
+            </div>
             <form className={style.formStyle}>
 
              <div className={style.labelInput}>
-                 <label htmlFor="numeroCard">Número de la tarjeta</label>
+                 <label htmlFor="numeroCard"
+                  className={style.letras}
+                  >Número de la tarjeta</label>
              </div>
-                 <input type="text" name="numeroCard"/>
+                 <input type="text"
+                  name="numeroCard"
+                //   style={{ borderColor: focus ? 'red' : 'green' }} 
+                  value={input.numeroCard} 
+                  onChange={handleChange}
+                //   onFocus={handleFocus}
+                //   onBlur={handleBlur}
+                  />
+                 {error.numeroCard && <p className={style.validation}>{error.numeroCard}</p>}
              
              <div className={style.labelInput}>
                  <label htmlFor="nombreCard">Nombre</label>
              </div>
-                 <input type="text" name="nombreCard"/>
+                 <input type="text" 
+                 name="nombreCard" 
+                 className={style.input} 
+                 value={input.nombreCard} 
+                 onChange={handleChange}/>
+                 {error.nombreCard && <p className={style.validation}>{error.nombreCard}</p>}
 
              <div className={style.labelInput}>
                  <label htmlFor="apellidoCard">Apellido</label>
              </div>
-                 <input type="text" name="apellidoCard"/>
+                 <input type="text" 
+                 name="apellidoCard" 
+                 className={style.input} 
+                 value={input.apellidoCard} 
+                 onChange={handleChange}/>
+                 {error.apellidoCard && <p className={style.validation}>{error.apellidoCard}</p>}
+
+             <div className={style.labelInput}>
+                <label htmlFor='DNICard'>DNI</label>
+             </div>
+                <input type="text" 
+                name='DNICard' 
+                className={style.input} 
+                value={input.DNICard} 
+                onChange={handleChange}/>
+                {error.DNICard && <p className={style.validation}>{error.DNICard}</p>}   
 
              <div className={style.labelInput}>
                  <label htmlFor="fechaCard">Fecha de expiración</label>
              </div>
-                 <input type="text" name="fechaCard"/>
+                 <input type="text" 
+                 name="fechaCard" 
+                 className={style.input} 
+                 value={input.fechaCard} 
+                 onChange={handleChange}/>
+                 {error.fechaCard && <p className={style.validation}>{error.fechaCard}</p>}
 
              <div className={style.labelInput}>
                  <label htmlFor="cvcCard">CVC</label>
              </div>
-                 <input type="text" name="cvcCard"/>
+                 <input type="text" 
+                 name="cvcCard" 
+                 className={style.input} 
+                 value={input.cvcCard} 
+                 onChange={handleChange}/>
+                 {error.cvcCard && <p className={style.validation}>{error.cvcCard}</p>}
 
              <div className={style.buttonCenter}>
-                  <button type="submit" >Pagar</button>
+                  <button type="submit" className={style.buttonColor}>Pagar</button>
              </div>
 
             </form>

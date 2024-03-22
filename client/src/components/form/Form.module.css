@@ -1,5 +1,5 @@
-.formStyle{
-    background-color: rgb(46, 121, 180);
+/* .formStyle{
+    background-color: #092b5a;
     width: fit-content;
     padding: 1em;
     border-radius: 10px;
@@ -17,9 +17,82 @@
 .labelInput {
     display: block;
     margin-bottom: 10px; /* Ajusta este valor según sea necesario para el espaciado entre los elementos */
+/* }
+
+.buttonCenter {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.buttonColor{
+    background-color: #09738a;
+    color: rgb(255, 255, 255)
+}
+
+.imageContainer {
+    text-align: center;
+    margin-bottom: 20px; /* Ajusta según sea necesario */
+/* } */ 
+
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.formStyle {
+    /* background-color: #092b5a; */
+    width: fit-content;
+    padding: 1em;
+    border-radius: 10px;
+    /* color: rgb(0, 0, 0); */
+}
+
+.labelInput {
+    display: block;
+    margin-bottom: 10px;
+    font-family: Times New Roman (12) Arial (11);
 }
 
 .buttonCenter {
     text-align: center;
     margin-top: 20px;
+}
+
+.buttonColor {
+    /* background-color: rgb(9, 115, 138); */
+    background-color: #0079c8;
+    color: rgb(255, 255, 255);
+    font-family: Times New Roman (12) Arial (11);
+}
+
+.imageCenter {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.title{
+    margin-top: -60px;
+}
+
+
+ .letras{
+    font-family: Times New Roman (12) Arial (11);
+} 
+
+.validation{
+    color:rgb(255, 0, 0)
+}
+
+.imageTamaño{
+    height: 300px;
+    width: 400px;
+}
+
+
+.input:focus {
+    border-color: #0079c8; /* Color del borde al estar seleccionado */
 }

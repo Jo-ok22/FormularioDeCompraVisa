@@ -6,7 +6,6 @@ const App = () => {
 
   return (
       <div>
-        <h1>comprar con visa</h1>
         <Form/>
       </div>
   )
