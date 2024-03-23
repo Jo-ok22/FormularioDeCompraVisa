@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import validation from './validation';
 import style from './Form.module.css';
+//import imagen2 from '../../../public'
 
 const Form = () => {
     const [input, setInput] = useState({
@@ -14,18 +15,15 @@ const Form = () => {
 
     const [error, setError] = useState({})
 
+
+    const [imagen, setImagen] = useState('tarjeta-visa-ejemplo.jpg')
+    console.log(setImagen);
+    console.log(imagen);
+
     const handleChange = (event) =>{
         setInput({...input, [event.target.name]:event.target.value})
         
     }
-
-    // const handleFocus = (event) => {
-    //     event.target.style.borderColor = 'red';
-    // }
-
-    // const handleBlur = (event) => {
-    //     event.target.style.borderColor = 'initial';
-    // }
 
     useEffect(()=>{
         if(input.numeroCard !== '' || input.nombreCard !== '' || input.apellidoCard !== '' || input.DNICard !== '' ||
@@ -35,7 +33,7 @@ const Form = () => {
     },[input])
     return(
         <div className={style.center}>
-            <h1 className={style.title}>comprar con visa</h1>
+            <h1>comprar con visa</h1>
             <div className={style.imageCenter}>
                  <img src='tarjeta-visa-ejemplo.jpg' alt='tarjeta' className={style.imageTamaño}/>
             </div>
@@ -48,12 +46,9 @@ const Form = () => {
              </div>
                  <input type="text"
                   name="numeroCard"
-                //   style={{ borderColor: focus ? 'red' : 'green' }} 
-                  value={input.numeroCard} 
-                  onChange={handleChange}
-                //   onFocus={handleFocus}
-                //   onBlur={handleBlur}
-                  />
+                  value={input.numeroCard}
+                  className={style.input} 
+                  onChange={handleChange}/>
                  {error.numeroCard && <p className={style.validation}>{error.numeroCard}</p>}
              
              <div className={style.labelInput}>
@@ -103,6 +98,8 @@ const Form = () => {
                  name="cvcCard" 
                  className={style.input} 
                  value={input.cvcCard} 
+                 onFocus={() => setImagen('tarjeta-visa-ejemplo-2.jpg')} // Cambiar imagen al enfocar el input CVC
+                 onBlur={() => setImagen('tarjeta-visa-ejemplo.jpg')}
                  onChange={handleChange}/>
                  {error.cvcCard && <p className={style.validation}>{error.cvcCard}</p>}
 

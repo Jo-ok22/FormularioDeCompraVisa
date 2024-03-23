@@ -78,11 +78,6 @@
     margin-top: -60px;
 }
 
-
- .letras{
-    font-family: Times New Roman (12) Arial (11);
-} 
-
 .validation{
     color:rgb(255, 0, 0)
 }
@@ -92,7 +87,12 @@
     width: 400px;
 }
 
+input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.9s;
+}
 
-.input:focus {
-    border-color: #0079c8; /* Color del borde al estar seleccionado */
+.input:hover {
+    box-shadow: 0 0 5px rgb(0, 121, 250); /* Cambia la sombra a azul al pasar el cursor sobre el input */
 }
