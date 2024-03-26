@@ -1,40 +1,3 @@
-/* .formStyle{
-    background-color: #092b5a;
-    width: fit-content;
-    padding: 1em;
-    border-radius: 10px;
-    color: rgb(255, 255, 255);
-    
-}
-
-.center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.labelInput {
-    display: block;
-    margin-bottom: 10px; /* Ajusta este valor según sea necesario para el espaciado entre los elementos */
-/* }
-
-.buttonCenter {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.buttonColor{
-    background-color: #09738a;
-    color: rgb(255, 255, 255)
-}
-
-.imageContainer {
-    text-align: center;
-    margin-bottom: 20px; /* Ajusta según sea necesario */
-/* } */ 
-
-
 .center {
     display: flex;
     flex-direction: column;
@@ -66,7 +29,7 @@
     /* background-color: rgb(9, 115, 138); */
     background-color: #0079c8;
     color: rgb(255, 255, 255);
-    font-family: Times New Roman (12) Arial (11);
+    
 }
 
 .imageCenter {
@@ -75,7 +38,13 @@
 }
 
 .title{
-    margin-top: -60px;
+    margin-top: -40px;
+    font-family: monospace;
+}
+
+.letras{
+    font-family: monospace;
+    font-size: 20px;
 }
 
 .validation{
@@ -87,6 +56,13 @@
     width: 400px;
 }
 
+.inputTamaño{
+    margin-top: -20px;
+    border-radius: 6px; /* Bordes redondeados */
+    padding: 6px; /* Ajustar el tamaño del input */
+    font-size: 14px; /* Tamaño de la fuente */
+}
+
 input {
     padding: 5px;
     border: 1px solid #ccc;
@@ -94,5 +70,6 @@ input {
 }
 
 .input:hover {
-    box-shadow: 0 0 5px rgb(0, 121, 250); /* Cambia la sombra a azul al pasar el cursor sobre el input */
+    box-shadow: 0 0 5px rgb(54, 151, 255); /* Cambia la sombra a azul al pasar el cursor sobre el input */
 }
+
