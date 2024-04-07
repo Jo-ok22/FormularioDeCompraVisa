@@ -1,35 +1,51 @@
+
+body {
+    background-color: rgb(205, 227, 245);
+}
+
+
 .center {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    padding: 50px; /* Ajusta el padding para aumentar el tamaño del contenedor */
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(185, 182, 182);
+    border-radius: 20px;
 }
+
 
 .formStyle {
     /* background-color: #092b5a; */
+    background-color: rgb(255, 255, 255);
     width: fit-content;
     padding: 1em;
     border-radius: 10px;
-    /* color: rgb(0, 0, 0); */
 }
 
 .labelInput {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* Reduce el espacio entre etiquetas y campos de entrada */
     font-family: Times New Roman (12) Arial (11);
 }
 
 .buttonCenter {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px; /* Reduce el espacio entre los campos de entrada y el botón */
 }
 
 .buttonColor {
-    /* background-color: rgb(9, 115, 138); */
     background-color: #0079c8;
     color: rgb(255, 255, 255);
-    
+    font-family: monospace;
+    font-size: 16px; /* Reduce el tamaño de la fuente */
+}
+.buttongrey{
+    background-color: rgb(77, 74, 74);
+    color: rgb(255, 255, 255);
+    font-family: monospace;
+    font-size: 16px; /* Reduce el tamaño de la fuente */
 }
 
 .imageCenter {
@@ -38,28 +54,30 @@
 }
 
 .title{
-    margin-top: -40px;
-    font-family: monospace;
+    margin-top: -20px; /* Reduce el espacio sobre el título */
+    font-family:  monospace;
+    color: rgb(70, 96, 122);
 }
 
 .letras{
     font-family: monospace;
-    font-size: 20px;
+    font-size: 16px; /* Reduce el tamaño de la fuente */
+    color: rgb(70, 96, 122);
 }
 
 .validation{
-    color:rgb(255, 0, 0)
+    color:rgb(255, 0, 0);
 }
 
 .imageTamaño{
-    height: 300px;
-    width: 400px;
+    height: 150px; /* Reduce el tamaño de la imagen */
+    width: 250px; /* Reduce el tamaño de la imagen */
 }
 
 .inputTamaño{
-    margin-top: -20px;
-    border-radius: 6px; /* Bordes redondeados */
-    padding: 6px; /* Ajustar el tamaño del input */
+    margin-top: -10px; /* Reduce el espacio entre los campos de entrada */
+    border-radius: 6px;
+    padding: 5px; /* Ajusta el tamaño del input */
     font-size: 14px; /* Tamaño de la fuente */
 }
 
@@ -70,6 +88,95 @@ input {
 }
 
 .input:hover {
-    box-shadow: 0 0 5px rgb(54, 151, 255); /* Cambia la sombra a azul al pasar el cursor sobre el input */
+    box-shadow: 0 0 5px rgb(54, 151, 255);
 }
 
+
+/* .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente 
+    opacity: 0; /* Inicialmente invisible */
+    /*transition: opacity 1s linear; /* Transición de opacidad */
+    /* transition: opacity 9s ease-in-out; */
+    /* transition: opacity 9s ease-in-out; */
+    /* transition: opacity 0s ease-in-out; 
+    pointer-events: none; /* Evita la interacción con la modal mientras está invisible *
+}
+
+.modal.show {
+    opacity: 1; /* Hacer visible 
+    pointer-events: auto; /* Permitir interacción *
+}
+
+.modalContent {
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+} */
+
+
+
+/* .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente *
+    opacity: 0; /* Inicialmente invisible *
+    transition: opacity 5s ease-in-out; /* Transición de opacidad de 9 segundos *
+    pointer-events: none; /* Evita la interacción con el modal mientras está invisible *
+}
+
+.modal.show {
+    opacity: 1; /* Hacer visible *
+    pointer-events: auto; /* Permitir interacción *
+}
+
+.modalContent {
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+} */

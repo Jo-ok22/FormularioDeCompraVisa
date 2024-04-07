@@ -158,7 +158,7 @@ const validation = (input, focusInput) => {
     // Validar el input de número de tarjeta
     if (focusInput === 'numeroCard' && input.numeroCard !== '') {
         if (!/^[0-9]+$/.test(input.numeroCard)) {
-            error.numeroCard = 'el campo solo acepta numeros del 0 al 9';
+            error.numeroCard = 'solo numeros del 0 al 9';
         }
     }
 
@@ -179,7 +179,7 @@ const validation = (input, focusInput) => {
     // Validar el input de DNI
     if (focusInput === 'DNICard' && input.DNICard !== '') {
         if (!/^[0-9]+$/.test(input.DNICard)) {
-            error.DNICard = 'el campo solo acepta numeros del 0 al 9';
+            error.DNICard = 'solo numeros del 0 al 9';
         }
     }
 

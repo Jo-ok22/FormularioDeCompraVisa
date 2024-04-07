@@ -51,6 +51,12 @@ const Form = () => {
     },[input, focusInput]);
 
 
+    const handlePayment = () => {
+        alert('¡Pago Exitoso!')
+        setInput(input)
+    }
+
+
     return(
         <div className={style.center}>
             <h1 className={style.title}>Comprar con tarjeta</h1>
@@ -138,9 +144,18 @@ const Form = () => {
                  onBlur={handleBlur}/>
                  {error.cvcCard && <p className={style.validation}>{error.cvcCard}</p>}
 
-             <div className={style.buttonCenter}>
-                  <button type="submit" className={`${style.buttonColor} ${style.letras}`}>Pagar</button>
-             </div>
+                <div className={style.buttonCenter}>
+                  {(input.numeroCard === '' || error.numeroCard ||
+                  input.nombreCard === '' || error.nombreCard ||
+                  input.apellidoCard === '' || error.apellidoCard ||
+                  input.DNICard === '' || error.DNICard ||
+                  input.fechaCard === '' || error.fechaCard ||
+                  input.cvcCard === '' || error.cvcCard) ? (
+                    <button type="submit" className={style.buttongrey}>Pagar</button>
+                  ) : (
+                    <button type="submit" className={style.buttonColor} onClick={handlePayment}>Pagar</button>
+                 )}
+                </div> 
 
             </form>
         </div>
