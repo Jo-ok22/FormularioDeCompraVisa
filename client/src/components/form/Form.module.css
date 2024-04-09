@@ -1,4 +1,3 @@
-
 body {
     background-color: rgb(205, 227, 245);
 }
@@ -24,16 +23,19 @@ body {
     border-radius: 10px;
 }
 
+
 .labelInput {
     display: block;
     margin-bottom: 5px; /* Reduce el espacio entre etiquetas y campos de entrada */
-    font-family: Times New Roman (12) Arial (11);
+    /* font-family: Times New Roman (12) Arial (11); */
 }
+
 
 .buttonCenter {
     text-align: center;
     margin-top: 10px; /* Reduce el espacio entre los campos de entrada y el botón */
 }
+
 
 .buttonColor {
     background-color: #0079c8;
@@ -41,17 +43,22 @@ body {
     font-family: monospace;
     font-size: 16px; /* Reduce el tamaño de la fuente */
 }
+
+
 .buttongrey{
     background-color: rgb(77, 74, 74);
     color: rgb(255, 255, 255);
     font-family: monospace;
     font-size: 16px; /* Reduce el tamaño de la fuente */
+    pointer-events: none;
 }
+
 
 .imageCenter {
     text-align: center;
     margin-bottom: 10px;
 }
+
 
 .title{
     margin-top: -20px; /* Reduce el espacio sobre el título */
@@ -59,20 +66,24 @@ body {
     color: rgb(70, 96, 122);
 }
 
+
 .letras{
     font-family: monospace;
     font-size: 16px; /* Reduce el tamaño de la fuente */
     color: rgb(70, 96, 122);
 }
 
+
 .validation{
     color:rgb(255, 0, 0);
 }
+
 
 .imageTamaño{
     height: 150px; /* Reduce el tamaño de la imagen */
     width: 250px; /* Reduce el tamaño de la imagen */
 }
+
 
 .inputTamaño{
     margin-top: -10px; /* Reduce el espacio entre los campos de entrada */
@@ -81,102 +92,27 @@ body {
     font-size: 14px; /* Tamaño de la fuente */
 }
 
+
+.inputDesplegable{
+    margin-top: -10px; /* Reduce el espacio entre los campos de entrada */
+    border-radius: 6px;
+    padding: 5px; /* Ajusta el tamaño del input, valor fijo */
+    font-size: 15px; /* Tamaño de la fuente */
+    width: 90px; /* Tamaño fijo para el input desplegable */
+    height: 27px;
+    color: rgb(70, 96, 122);
+    font-family: monospace;
+}
+
+
 input {
     padding: 5px;
     border: 1px solid #ccc;
     transition: border-color 0.9s;
 }
 
+
 .input:hover {
     box-shadow: 0 0 5px rgb(54, 151, 255);
 }
 
-
-/* .modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente 
-    opacity: 0; /* Inicialmente invisible */
-    /*transition: opacity 1s linear; /* Transición de opacidad */
-    /* transition: opacity 9s ease-in-out; */
-    /* transition: opacity 9s ease-in-out; */
-    /* transition: opacity 0s ease-in-out; 
-    pointer-events: none; /* Evita la interacción con la modal mientras está invisible *
-}
-
-.modal.show {
-    opacity: 1; /* Hacer visible 
-    pointer-events: auto; /* Permitir interacción *
-}
-
-.modalContent {
-    background-color: #fefefe;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-} */
-
-
-
-/* .modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente *
-    opacity: 0; /* Inicialmente invisible *
-    transition: opacity 5s ease-in-out; /* Transición de opacidad de 9 segundos *
-    pointer-events: none; /* Evita la interacción con el modal mientras está invisible *
-}
-
-.modal.show {
-    opacity: 1; /* Hacer visible *
-    pointer-events: auto; /* Permitir interacción *
-}
-
-.modalContent {
-    background-color: #fefefe;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-} */
