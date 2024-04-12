@@ -106,13 +106,16 @@ body {
 
 
 input {
-    padding: 5px;
+    /* padding: 5px;
     border: 1px solid #ccc;
-    transition: border-color 0.9s;
+    transition: border-color 0.9s; */
+    border: 0.5px solid;
 }
 
 
-.input:hover {
-    box-shadow: 0 0 5px rgb(54, 151, 255);
+.input:focus {
+    /* box-shadow: 0 0 5px rgb(54, 151, 255); */
+    border: 0.5px solid #0079c8;
+    outline: 1px solid #0079c8;
 }
 
